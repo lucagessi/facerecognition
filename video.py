@@ -5,19 +5,8 @@ import cv2
 import time
 
 video_capture = cv2.VideoCapture(0)
-folder = "./test/luca"
-# detect faces in the image
+folder = "./img/nuove"
 
-# draw an image with detected objects
-def draw_image_with_boxes(frame, result_list):
-	
-	# plot each box
-    for result in result_list:
-        # get coordinates
-        x, y, width, height = result['box']
-        # draw the box
-        cv2.rectangle(frame, (x, y), (x+width, y+height), (0, 255, 0), 2)
-    
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
